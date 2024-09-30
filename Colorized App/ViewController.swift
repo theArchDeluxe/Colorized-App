@@ -38,7 +38,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderActions(_ sender: UISlider) {
+        
         setColor()
+        
         switch sender {
         case redSlider: redLabel.text = string(from: redSlider)
         case greenSlider: greenLabel.text = string(from: greenSlider)
