@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ColorSettingsViewController: UIViewController {
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redLabel: UILabel!
@@ -23,13 +23,6 @@ class ViewController: UIViewController {
         
         colorView.layer.cornerRadius = 15
         
-        redSlider.minimumValue = 0
-        redSlider.maximumValue = 1
-        greenSlider.minimumValue = 0
-        greenSlider.maximumValue = 1
-        blueSlider.minimumValue = 0
-        blueSlider.maximumValue = 1
-        
         setColor()
         
         redLabel.text = string(from: redSlider)
@@ -38,7 +31,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderActions(_ sender: UISlider) {
-        
         setColor()
         
         switch sender {
@@ -50,12 +42,9 @@ class ViewController: UIViewController {
     
     private func setColor() {
         colorView.backgroundColor = UIColor(
-            red: CGFloat(
-                redSlider.value),
-            green: CGFloat(
-                greenSlider.value),
-            blue: CGFloat(
-                blueSlider.value),
+            red: CGFloat(redSlider.value),
+            green: CGFloat(greenSlider.value),
+            blue: CGFloat(blueSlider.value),
             alpha: 1)
     }
     
