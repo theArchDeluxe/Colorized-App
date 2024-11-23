@@ -40,8 +40,6 @@ final class ColorSettingsViewController: UIViewController {
         setValue(for: redLabel, greenLabel, blueLabel)
         setValue(for: redTextField, greenTextField, blueTextField)
         
-        setColor()
-        
         redLabel.text = string(from: redSlider)
         greenLabel.text = string(from: greenSlider)
         blueLabel.text = string(from: blueSlider)
@@ -54,13 +52,19 @@ final class ColorSettingsViewController: UIViewController {
     
     // MARK: - User Login Processing
     @IBAction func sliderActions(_ sender: UISlider) {
-        setColor()
         
         switch sender {
-        case redSlider: redLabel.text = string(from: redSlider)
-        case greenSlider: greenLabel.text = string(from: greenSlider)
-        default: blueLabel.text = string(from: blueSlider)
+        case redSlider:
+            setValue(for: redLabel)
+            setValue(for: redTextField)
+        case greenSlider:
+            setValue(for: greenLabel)
+            setValue(for: greenTextField)
+        default:
+            setValue(for: blueLabel)
+            setValue(for: blueTextField)
         }
+        setColor()
     }
     
     // MARK: - Methods For Setting Values
@@ -100,11 +104,11 @@ final class ColorSettingsViewController: UIViewController {
     // MARK: - Incorrect Input
     private func showAlert(withTitle title: String, andMessage message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let normalAction = UIActiontitle: "OK", style: .default) {_ in
+        let normalAction = UIAlertAction(title: "Ok", style: .default) {_ in
             textField?.text = "0.50"
             textField?.becomeFirstResponder()
         }
-        alert.addAction(okAction)
+        alert.addAction(normalAction)
         present(alert, animated: true)
     }
     

@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" id="7PS-k2-5kF">
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="gln-9W-MNG">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="tCW-UD-uFB"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="tCW-UD-uFB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -35,7 +35,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ColorSettingsViewController" customModule="Colorized_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="78y-rE-8cY">
@@ -128,8 +128,8 @@
                                     <constraint firstAttribute="height" constant="132" id="eCQ-Qb-pos"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Up-ysY">
-                                <rect key="frame" x="128" y="453.5" width="64.5" height="34.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-Up-ysY">
+                                <rect key="frame" x="128" y="473.5" width="64.5" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Done"/>
                                 <connections>
@@ -143,6 +143,7 @@
                             <constraint firstItem="xl7-3T-nUy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="TK5-1H-Nu5"/>
                             <constraint firstItem="Li0-Up-ysY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WoV-ZK-ryK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="78y-rE-8cY" secondAttribute="trailing" constant="16" id="c4d-8e-5xI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Li0-Up-ysY" secondAttribute="bottom" constant="60" id="jPz-gM-PjB"/>
                             <constraint firstItem="78y-rE-8cY" firstAttribute="top" secondItem="xl7-3T-nUy" secondAttribute="bottom" constant="50" id="muA-Jt-ZxK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xl7-3T-nUy" secondAttribute="trailing" constant="16" id="s4d-z7-Q5F"/>
                             <constraint firstItem="xl7-3T-nUy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="xLG-Kz-mFa"/>
