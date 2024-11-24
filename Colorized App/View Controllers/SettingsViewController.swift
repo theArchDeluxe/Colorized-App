@@ -117,7 +117,6 @@ final class SettingsViewController: UIViewController {
     private func showAlert(withTitle title: String, andMessage message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok", style: .default) {_ in
-            //textField?.text = "1.00"
             textField?.becomeFirstResponder()
         }
         alert.addAction(okAction)
@@ -142,7 +141,6 @@ extension SettingsViewController: UITextFieldDelegate {
     
     // MARK: - Toolbar With Done
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        //guard textField != redTextField else { return }
         
         let keyboardToolbar = UIToolbar()
         keyboardToolbar.sizeToFit()
